@@ -1,5 +1,10 @@
+<script setup>
+    const props = defineProps(['mostraResposta'])
+</script>
+
 <template>
     <footer class="m-0 p4">
+        <span>{{ props.mostraResposta }}</span>
         <p class="text-center bg-light m-0 p-3">
             Feito com carinho pelo <a href="https://www.linkedin.com/in/rauan-liberato/">Rauan</a>
         </p>

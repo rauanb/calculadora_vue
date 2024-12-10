@@ -1,13 +1,29 @@
+<script setup>
+    const props = defineProps([
+        'alteraOperacao',
+        'alteraOperador1',
+        'alteraOperador2'
+        ])
+</script>
+
 <template>
     <form>
         <div class="row">
             <div class="col">
-                <input class="form-control" required type="number" placeholder="Número 1">
+                <input
+                @change="alteraOperador1"
+                class="form-control"
+                type="number"
+                placeholder="Número 1">
             </div>
             <div class="col">
-                <input class="form-control" required type="number" placeholder="Número 2">
+                <input
+                @change="alteraOperador2"
+                class="form-control"
+                type="number"
+                placeholder="Número 2">
             </div>
-            <div class="col">
+            <div @change="props.alteraOperacao" class="col">
                 <select class="form-control">
                     <option value="Soma">Soma</option>
                     <option value="Subtracao">Subtração</option>
